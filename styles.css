@@ -1,0 +1,403 @@
+/* General Styles */
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    padding-top: 76px;
+    background-color: #f8f9fa;
+}
+
+/* Navbar Styles */
+.navbar {
+    transition: all 0.3s;
+    padding: 1rem 0;
+}
+
+.navbar-brand i {
+    font-size: 1.5rem;
+}
+
+/* Cart Button */
+.cart-btn {
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    color: #343a40;
+    padding: 0.5rem;
+    transition: color 0.3s;
+    position: relative;
+    cursor: pointer;
+}
+
+.cart-btn:hover {
+    color: #28a745;
+}
+
+.cart-badge {
+    position: absolute;
+    top: -8px;  /* Ajusta la altura */
+    right: auto;  
+    left: 60%;  /* Mueve el número más a la izquierda */
+    transform: translate(-50%, -50%);  /* Centra correctamente */
+    font-size: 12px;
+    padding: 4px;
+    border-radius: 50%;
+    background: red;
+    color: white;
+    min-width: 18px;
+    text-align: center;
+    display: none;
+}
+.cart-footer {
+    position: sticky;
+    bottom: 0;
+    background: white;
+    padding: 15px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Styles */
+.section {
+    padding: 5rem 0;
+    background: #fff;
+}
+
+.section:nth-child(even) {
+    background: #f8f9fa;
+}
+
+/* Product Card */
+.product-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-image {
+    width: 50%;  /* Ajusta el ancho */
+    height: auto; /* Mantiene la proporción */
+    display: block;
+    margin: 0 auto; /* Centra la imagen */
+}
+
+.product-details {
+    padding: 1.5rem;
+}
+
+.product-price {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #28a745;
+}
+
+/* Cart Sidebar */
+.cart-sidebar {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100%;
+    max-width: 380px;
+    height: 100vh;
+    background: white;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.2);
+    transition: right 0.3s ease;
+    z-index: 1050;
+    display: flex;
+    flex-direction: column;
+}
+
+@media (min-width: 576px) {
+    .cart-sidebar {
+        right: -380px;
+    }
+}
+
+.cart-sidebar.active {
+    right: 0;
+}
+
+.cart-header {
+    padding: 1rem;
+    border-bottom: 1px solid #dee2e6;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+}
+
+.cart-item {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.cart-footer {
+    padding: 1rem;
+    border-top: 1px solid #dee2e6;
+    background: white;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+/* Testimonial Cards */
+.testimonial-card {
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+}
+
+.testimonial-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.testimonial-content {
+    padding: 1.5rem;
+    text-align: justify;
+}
+
+.testimonial-img {
+    width: 300px;  /* Ajusta este valor para cambiar el tamaño */
+    height: 300px; /* Ajusta este valor para cambiar el tamaño */
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+/* Notificación flotante moderna */
+.notificacion-carrito {
+    position: fixed;
+    bottom: 20px;
+    right: -400px; /* Oculta la notificación fuera de la pantalla */
+    background: rgba(40, 167, 69, 0.95); /* Verde Bootstrap con transparencia */
+    color: white;
+    padding: 15px 20px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    min-width: 300px;
+    max-width: 400px;
+    transition: right 0.5s ease-in-out, opacity 0.3s ease-in-out;
+    opacity: 0;
+}
+
+/* Icono de check */
+.icono-check {
+    background: white;
+    color: #28a745;
+    font-size: 18px;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-weight: bold;
+}
+
+/* Botón de cierre */
+.btn-cerrar-notificacion {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Estilo del texto secundario */
+.texto-secundario {
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+/*Video*/
+        .carousel-control-prev-icon, .carousel-control-next-icon {
+            background-color: rgba(0, 0, 0, 0.6);
+            border-radius: 50%;
+            padding: 15px;
+        }
+        .carousel-inner video {
+            border-radius: 15px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+            width: 60%;
+            height: 550px;
+            object-fit: cover;
+        }
+
+/* Mostrar notificación */
+.notificacion-carrito.mostrar {
+    right: 20px;
+    opacity: 1;
+}
+.chat-widget {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 320px;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    border-radius: 12px;
+    transition: right 0.3s ease-in-out;
+    overflow: hidden;
+    font-family: 'Arial', sans-serif;
+    display: none;
+    padding-bottom: 50px;
+}
+
+.chat-widget.active {
+    display: block;
+    right: 30px; /* En lugar de 20px */
+    bottom: 100px;
+}
+
+.chat-header {
+    background: #28a745;
+    color: white;
+    padding: 12px;
+    text-align: center;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header .close-chat {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.chat-body {
+    max-height: 250px;
+    overflow-y: auto;
+    padding: 15px;
+}
+
+.faq-page {
+    display: none;
+}
+
+.faq-page.active {
+    display: block;
+}
+
+.faq-question {
+    font-weight: bold;
+    cursor: pointer;
+    margin: 10px 0;
+    padding: 8px;
+    background: #f1f1f1;
+    border-radius: 6px;
+    transition: background 0.3s;
+}
+
+.faq-question:hover {
+    background: #e0e0e0;
+}
+
+.faq-answer {
+    display: none;
+    margin-top: 5px;
+    padding: 8px;
+    color: #555;
+    background: #f9f9f9;
+    border-radius: 6px;
+    text-align: justify;
+}
+
+.faq-answer.visible {
+    display: block;
+}
+
+.faq-pagination {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    background: white;
+}
+
+.faq-pagination button {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.faq-pagination button:hover {
+    background: #218838;
+}
+
+.faq-pagination .prev-btn:disabled {
+    background: #ccc;
+    cursor: default;
+}
+
+.chat-btn {
+    position: fixed;
+    right: 20px;
+    padding: 15px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+/* Footer */
+.footer {
+    background: #f8f9fa;
+    padding: 3rem 0;
+    margin-top: 3rem;
+}
+
+.social-icons a {
+    color: #343a40;
+    font-size: 1.8rem;
+    margin: 0 0.5rem;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+@media (max-width: 768px) {
+    .navbar-toggler, #navbarNav {
+        display: none !important;
+    }
+}
+        .chatbot-icon {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 80px;
+            height: 80px;
+            cursor: pointer;
+        }
+        .chat-container {
+            display: none;
+            position: fixed;
+            bottom: 90px;
+            right: 20px;
+            width: 300px;
+            height: 400px;
+            background: white;
+            border: 1px solid #ccc;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }

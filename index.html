@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="PsoriSant - Crema especializada en el cuidado de la piel">
+    <title>PsoriSant - Crema especializada</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm">
+    <div class="container">
+        <a class="navbar-brand" href="/">
+            <i class="fas fa-leaf text-success"></i> PsoriSant
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#producto">Producto</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#testimonios">Testimonios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#nosotros">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#contacto">Contacto</a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 🛒 Botón del carrito (MOVER AQUÍ) -->
+        <button class="btn cart-btn position-relative" onclick="toggleCarrito()">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-badge position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" id="contador-carrito">
+                0
+            </span>
+        </button>
+    </div>
+</nav>
+
+    <!-- Product Section -->
+<section id="acerca-de-nosotros" class="section">
+    <div class="container">
+        <div class="text-justify">
+            <p class="lead">
+                <strong>Psorisant</strong> es una crema de uso tópico diseñada para ayudarte a controlar y aliviar afecciones cutáneas como la psoriasis, dermatitis, descamación, hongos y otras condiciones relacionadas con la resequedad de la piel.
+                Con una fórmula de alta eficacia, Psorisant no solo te ofrece resultados visibles, sino también un precio altamente competitivo en comparación con productos similares en el mercado.
+                Con una relación calidad-precio inigualable, Psorisant se posiciona como una alternativa accesible y confiable para el cuidado de la piel.
+            <p class="lead">¡Elige Psorisant y descubre la diferencia!
+            <p class="lead">Psorisant: calidad, eficacia y economía en un solo producto.</p>
+        </div>
+    </div>
+</section>
+    <section id="producto" class="section">
+        <div class="container">
+            <h2 class="text-center mb-5">Nuestro Producto</h2>
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="https://i.ibb.co/93NMchX9/pruebaimagen.png" alt="pruebaimagen" border="0" class="product-image">
+                </div>
+                <div class="col-md-6">
+                    <h3>Crema especializada PsoriSant</h3>
+                    <p class="lead">Nuestra crema está especialmente formulada para el cuidado de la piel sensible.</p>
+                    <hr>
+                    <p class="lead text-danger"><strong>¡Descuentos a partir de dos unidades!</strong></p>
+                    <p class="h3 text-success mb-4">$60,000</p>
+                    <button class="btn btn-success btn-lg w-100" onclick="agregarAlCarrito(1, 'Crema PsoriSant', 60000)">
+                        <i class="fas fa-cart-plus"></i> Agregar al carrito
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Testimonials Section con Carrusel -->
+<section id="testimonios" class="section bg-light">
+    <div class="container">
+        <h2 class="text-center mb-5">Testimonios</h2>
+        <div id="testimoniosCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <!-- Testimonio 1 -->
+                <div class="carousel-item active text-center">
+                    <div class="testimonial-card">
+                        <img src="https://i.ibb.co/9H0trvM9/Whats-App-Image-2025-02-18-at-3-08-19-PM.jpg" class="testimonial-img" alt="Whats-App-Image-2025-02-18-at-3-08-19-PM">
+                        <p class="lead">"La psoriasis en mis codos era algo que siempre me molestaba, sobre todo cuando hacía ejercicio. Un día, en el gimnasio, un compañero me recomendó Psorisant. Al principio no le creí mucho, pero decidí probarla. En solo unos días, la piel de mis codos estaba mucho mejor."</p>
+                        <p class="text-muted mb-0">- Camilo G. - Ibagué</p>
+                    </div>
+                </div>
+                <!-- Testimonio 2 -->
+                <div class="carousel-item text-center">
+                    <div class="testimonial-card">
+                        <img src="https://i.ibb.co/01STbY9/Whats-App-Image-2025-02-18-at-3-08-19-PM-2.jpg" class="testimonial-img" alt="Whats-App-Image-2025-02-18-at-3-08-19-PM-2">
+                        <p class="lead">"Tengo psoriasis desde hace años en mis manos. Un día, estando de visita en Ibagué, una tía me recomendó esta crema. No esperaba mucho, pero después de varias aplicaciones las manchas habían desaparecido casi por completo. Ahora me siento mucho más segura."</p>
+                        <p class="text-muted mb-0">- Luisa F. - Coyaima</p>
+                    </div>
+                </div>
+                <!-- Testimonio 3 -->
+                <div class="carousel-item text-center">
+                    <div class="testimonial-card">
+                       <img src="https://i.ibb.co/Q7dzdrS1/image.jpg" class="testimonial-img" alt="image">
+                        <p class="lead">"Mi mamá fue la que me recomendó Psorisant porque ella también la usa para la dermatitis. Al principio pensé que sería igual a las otras cremas que había probado, pero me sorprendió. En tres días, la piel de mi pierna ya no estaba roja ni irritada. Lo mejor es que no huele fuerte como otros productos. 100% recomendada!"</p>
+                        <p class="text-muted mb-0">- Andres S. - Ibagué</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Controles del carrusel corregidos -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#testimoniosCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon bg-dark p-3 rounded-circle" aria-hidden="true"></span>
+                <span class="visually-hidden">Anterior</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#testimoniosCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon bg-dark p-3 rounded-circle" aria-hidden="true"></span>
+                <span class="visually-hidden">Siguiente</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+     <!-- Sección de Video con Carrusel -->
+    <section id="video" class="section py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="text-center mb-5">Conoce más sobre PsiroSant</h2>
+            <div id="videoCarousel" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <video class="w-75" controls autoplay muted loop>
+                            <source src="video1.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de videos.
+                        </video>
+                    </div>
+                    <div class="carousel-item">
+                        <video class="w-75" controls autoplay muted loop>
+                            <source src="video2.mp4" type="video/mp4">
+                            Tu navegador no soporta la reproducción de videos.
+                        </video>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#videoCarousel" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Anterior</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#videoCarousel" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Siguiente</span>
+                </button>
+            </div>
+        </div>
+    </section>
+    
+    <!-- About Us Section -->
+    <section id="nosotros" class="section">
+        <div class="container">
+            <h2 class="text-center mb-5">Nosotros</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card shadow-sm">
+                        <div class="card-body">
+                            <p class="lead text-center">
+                                En PsoriSant, nos dedicamos a crear productos especializados de la más alta calidad para el cuidado de tu piel. 
+                                Nuestra crema está formulada con ingredientes seleccionados cuidadosamente para ayudar a 
+                                personas con problemas de piel sensible. Con años de experiencia y miles de clientes satisfechos, 
+                                nos enorgullece ofrecer una solución rápida y efectiva.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contacto" class="section bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Contacto</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card shadow-sm">
+                        <div class="card-body text-center">
+                            <p class="lead mb-4">
+                                Estamos aquí para ayudarte. No dudes en contactarnos para cualquier consulta 
+                                sobre nuestros productos o para realizar tu pedido.
+                            </p>
+                            <p><i class="fas fa-phone me-2"></i> +57 320 227 4408</p>
+                            <p><i class="fas fa-map-marker-alt me-2"></i> Carrera 17 Número 93 - 09 Piso 3, Ibagué, Tolima</p>
+                            <div class="social-icons mt-4">
+                                <a href="https://facebook.com/your-page" target="_blank" class="me-3">
+                                    <i class="fab fa-facebook"></i>
+                                </a>
+                                <a href="https://wa.me/573202274408" target="_blank">
+                                    <i class="fab fa-whatsapp"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+<!-- Chatbot -->
+<div class="chat-widget">
+    <div class="chat-header">
+        Hola 👋 Estas son algunas de las preguntas frecuentes de nuestros clientes
+        <button class="close-chat">x</button>
+    </div>
+    <div class="chat-body">
+        <div class="faq-page page-1 active">
+            <div class="faq-question">¿Qué cantidad de producto incluye Psorisant?</div>
+            <div class="faq-answer">Cada envase de Psorisant contiene <strong>32</strong> gramos de crema, diseñada para ofrecer un uso prolongado y efectivo en el tratamiento de afecciones cutáneas.</div>
+
+            <div class="faq-question">¿Qué ingredientes contiene Psorisant?</div>
+            <div class="faq-answer">Psorisant está formulada con ingredientes de alta calidad como <strong>aloe vera, vitamina E, cera de abejas, ácido salicílico (30 mg), betametasona al 0.5% </strong> y otros compuestos humectantes que ayudan a restaurar y proteger la piel.</div>
+
+            <div class="faq-question">¿Tiene registro sanitario?</div>
+            <div class="faq-answer"> Psorisant es una <strong> fórmula magistral</strong> desarrollada para el cuidado de la piel. Si bien no cuenta con registro sanitario, los resultados hablan por sí mismos. Los testimonios de nuestros clientes respaldan su eficacia y confiabilidad. La decisión de probarla está en sus manos, pero le aseguramos que los resultados son visibles y satisfactorios.</div>
+        </div>
+
+        <div class="faq-page page-2">
+            <div class="faq-question">¿En cuánto tiempo comenzaré a ver resultados con Psorisant?</div>
+            <div class="faq-answer">Los resultados con Psorisant son rápidos y visibles a partir del <strong> segundo o tercer día de uso.</strong> Su fórmula está diseñada para actuar de manera efectiva desde las primeras aplicaciones.</div>
+
+            <div class="faq-question">¿La psoriasis desaparecerá por completo y no volverá a salir?</div>
+            <div class="faq-answer">La psoriasis es una afección crónica relacionada con un <strong>desorden hormonal</strong>, por lo que no tiene cura definitiva. Sin embargo, Psorisant ayuda a <strong>controlar y reducir significativamente</strong> las lesiones, logrando que la piel luzca sana.</div>
+
+            <div class="faq-question">¿Cuánto tiempo demora en llegar el producto?</div>
+            <div class="faq-answer">Realizamos envíos a través de <strong>Inter Rapidísimo.</strong> Si su destino es una capital, el pedido tarda de <strong>1 a 2 días hábiles</strong> (sin contar el día del envío). Si se encuentra en un <strong>pueblo o zona rural</strong>, el tiempo de entrega es de <strong>3 a 4 días hábiles.</div>
+        </div>
+    </div>
+
+    <div class="faq-pagination">
+        <button class="prev-btn" disabled>Anterior</button>
+        <button class="next-btn">Siguiente</button>
+    </div>
+</div>
+
+
+<!-- Botón flotante para abrir el chat -->
+<button class="chat-btn"><img src="imagen.png" alt="Chatbot" class="chatbot-icon" onclick="toggleChat()"></button>
+
+    <!-- Shopping Cart Sidebar -->
+    <div class="cart-sidebar" id="menuCarrito">
+        <div class="cart-header">
+            <h5 class="mb-0">Carrito de Compras</h5>
+            <button type="button" class="btn-close" onclick="toggleCarrito()"></button>
+        </div>
+        <div class="cart-body" id="lista-carrito">
+            <!-- Cart items will be loaded here -->
+        </div>
+        <div class="cart-footer">
+            <div class="total-section mb-3">
+                <h6 class="mb-0">Total:</h6>
+                <h5 class="mb-0" id="total-carrito">$0</h5>
+            </div>
+            <button class="btn btn-success w-100 mb-2" onclick="comprarPorWhatsApp()">
+                <i class="fab fa-whatsapp"></i> Comprar por WhatsApp
+            </button>
+            <button class="btn btn-outline-danger w-100" id="btnVaciar" onclick="vaciarCarrito()">
+                <i class="fas fa-trash"></i> Vaciar carrito
+            </button>
+        </div>
+    </div>
+
+
+<!-- Notificación flotante mejorada -->
+<div id="notificacion-carrito" class="notificacion-carrito">
+    <div class="icono-check">✔</div>
+    <div>
+        <p id="mensaje-notificacion"><strong>Producto agregado:</strong> <span id="nombre-producto"></span></p>
+        <p id="cantidad-producto" class="texto-secundario"></p>
+    </div>
+    <button onclick="cerrarNotificacion()" class="btn-cerrar-notificacion">&times;</button>
+</div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container py-4">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <p class="mb-0">&copy; 2025 PsoriSant. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
